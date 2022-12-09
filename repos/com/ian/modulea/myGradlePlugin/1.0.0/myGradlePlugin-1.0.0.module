@@ -1,0 +1,90 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.ian.modulea",
+    "module": "myGradlePlugin",
+    "version": "1.0.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.4"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 11,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "myGradlePlugin-1.0.0.jar",
+          "url": "myGradlePlugin-1.0.0.jar",
+          "size": 9811,
+          "sha512": "a948fa8c59a9d63c01d72e555b0939c46fce65a3eb3bd6c2250bed869544faf84e1c9d94c97880c1351bdf2bf4b4ea95b05f202a20ec73f07615c5f0bc102a92",
+          "sha256": "9e0c45abbdc579248926d24a74c6719fcef7ed28d675cf2d35af02285f418e4a",
+          "sha1": "27cc0d7467be58dec9b9aef4988b25e2be79a9fd",
+          "md5": "d341c2320ddca7930ce7eb65d7789168"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 11,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "org.ow2.asm",
+          "module": "asm-commons",
+          "version": {
+            "requires": "9.1"
+          }
+        },
+        {
+          "group": "com.android.tools.build",
+          "module": "gradle-api",
+          "version": {
+            "requires": "7.2"
+          }
+        },
+        {
+          "group": "com.android.tools.build",
+          "module": "gradle",
+          "version": {
+            "requires": "7.2.0"
+          }
+        },
+        {
+          "group": "org.jetbrains",
+          "module": "annotations",
+          "version": {
+            "requires": "16.0.1"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "myGradlePlugin-1.0.0.jar",
+          "url": "myGradlePlugin-1.0.0.jar",
+          "size": 9811,
+          "sha512": "a948fa8c59a9d63c01d72e555b0939c46fce65a3eb3bd6c2250bed869544faf84e1c9d94c97880c1351bdf2bf4b4ea95b05f202a20ec73f07615c5f0bc102a92",
+          "sha256": "9e0c45abbdc579248926d24a74c6719fcef7ed28d675cf2d35af02285f418e4a",
+          "sha1": "27cc0d7467be58dec9b9aef4988b25e2be79a9fd",
+          "md5": "d341c2320ddca7930ce7eb65d7789168"
+        }
+      ]
+    }
+  ]
+}

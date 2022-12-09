@@ -1,0 +1,40 @@
+plugins {
+    id 'groovy'
+    id 'maven-publish'
+}
+
+dependencies {
+    implementation gradleApi()
+    implementation localGroovy()
+
+    implementation 'org.ow2.asm:asm-commons:9.1'
+    implementation "com.android.tools.build:gradle-api:7.2"
+    implementation "com.android.tools.build:gradle:7.2.0"
+    implementation 'org.jetbrains:annotations:16.0.1'
+}
+
+def group = 'com.ian.modulea'
+def versionA = '1.0.0'
+def artifactIdA = 'myGradlePlugin'
+
+task sourceJar(type: Jar) {
+    archiveClassifier.set('sources')
+    from sourceSets.main.java.srcDirs
+}
+
+publishing {
+    publications {
+        debug(MavenPublication) {
+            groupId = group
+            artifactId = artifactIdA
+            version = versionA
+            from components.java
+            artifact sourceJar
+        }
+    }
+    // 添加仓库地址
+    repositories {
+        // 本地仓库, 会创建 repos 文件, 位于项目根目录下
+        maven { url uri('../repos') }
+    }
+}
